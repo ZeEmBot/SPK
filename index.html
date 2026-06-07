@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pemilihan Ekstrakurikuler (SAW)</title>
+    <link rel="stylesheet" href="style.css?v=<?php echo time(); ?>">
+</head>
+<body>
+<div class="container">
+    <h2>Form Kuisioner Minat & Bakat Siswa</h2>
+    <p class="subtitle">Isi data diri dan kuisioner di bawah ini dengan jujur</p>
+    
+    <form action="proses.php" method="POST">
+        
+        <div class="form-group">
+            <label>Nama Lengkap</label>
+            <input type="text" name="nama" placeholder="Masukkan nama lengkapmu" required autocomplete="off">
+        </div>
+
+        <div class="form-group">
+            <label>Kelas</label>
+            <select name="kelas" required>
+                <option value="" disabled selected>-- Pilih Kelas --</option>
+                <option value="7">Kelas 7</option>
+                <option value="8">Kelas 8</option>
+                <option value="9">Kelas 9</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Jenis Kelamin</label>
+            <select name="gender" required>
+                <option value="" disabled selected>-- Pilih Jenis Kelamin --</option>
+                <option value="Laki-laki">Laki-laki</option>
+                <option value="Perempuan">Perempuan</option>
+            </select>
+        </div>
+
+        <hr style="border: 0; height: 1px; background: #e2e8f0; margin: 30px 0;">
+
+        <div class="form-group">
+            <label>Bidang yang paling menarik perhatianmu?</label>
+            <select name="bidang" required>
+                <option value="" disabled selected>-- Pilih Bidang Minat --</option>
+                <option value="Seni & Kreativitas">Seni & Kreativitas</option>
+                <option value="Olahraga">Olahraga</option>
+                <option value="Keagamaan">Keagamaan</option>
+                <option value="Literasi & Bahasa">Literasi & Bahasa</option>
+                <option value="Pramuka & Alam">Pramuka & Alam</option>
+                <option value="Sosial & Lingkungan">Sosial & Lingkungan</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Mata pelajaran yang paling mudah kamu pahami?</label>
+            <select name="mapel" required>
+                <option value="" disabled selected>-- Pilih Mata Pelajaran --</option>
+                <option value="Matematika">Matematika</option>
+                <option value="IPA">IPA</option>
+                <option value="IPS">IPS</option>
+                <option value="Bahasa Indonesia">Bahasa Indonesia</option>
+                <option value="Bahasa Inggris">Bahasa Inggris</option>
+                <option value="Seni Budaya">Seni Budaya</option>
+                <option value="Informatika">Informatika</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Cara belajar yang paling efektif buatmu?</label>
+            <select name="cara_belajar" required>
+                <option value="" disabled selected>-- Pilih Cara Belajar --</option>
+                <option value="Visual">Visual (Lebih paham lewat gambar, video atau diagram)</option>
+                <option value="Auditory">Auditory (Lebih paham lewat penjelasan lisan/diskusi)</option>
+                <option value="Kinestetik">Kinestetik (Lebih paham dengan langsung praktik)</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Seberapa aktif kegiatan fisikmu setiap hari?</label>
+            <select name="aktif_fisik" required>
+                <option value="" disabled selected>-- Pilih Tingkat Aktivitas Fisik --</option>
+                <option value="Sangat aktif">Sangat aktif</option>
+                <option value="Cukup aktif">Cukup aktif</option>
+                <option value="Kurang aktif">Kurang aktif</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Apakah kamu bersedia mewakili sekolah pada lomba/kompetisi?</label>
+            <select name="bersedia_lomba" required>
+                <option value="" disabled selected>-- Pilih Kesediaan Lomba --</option>
+                <option value="Ya siap">Ya siap</option>
+                <option value="Mungkin">Mungkin / Tergantung situasi</option>
+                <option value="Tidak">Tidak</option>
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label>Kamu lebih suka kegiatan yang seperti apa?</label>
+            <select name="jenis_kegiatan" required>
+                <option value="" disabled selected>-- Pilih Jenis Kegiatan --</option>
+                <option value="Mandiri">Dilakukan sendiri / mandiri</option>
+                <option value="Tim">Dilakukan bersama kelompok / tim</option>
+                <option value="Keduanya">Keduanya (Bisa mandiri maupun tim)</option>
+            </select>
+        </div>
+
+        <button type="submit" class="btn">Hitung Rekomendasi Ekskul</button>
+    </form>
+
+    <div style="text-align: center; margin-top: 25px;">
+        <a href="login_admin.php" style="color: #94a3b8; text-decoration: none; font-size: 13px; font-weight: 500; transition: color 0.3s;" onmouseover="this.style.color='#64748b'" onmouseout="this.style.color='#94a3b8'">
+            Masuk sebagai Guru
+        </a>
+    </div>
+
+</div> </body>
+</html>
